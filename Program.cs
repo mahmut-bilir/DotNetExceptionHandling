@@ -57,3 +57,23 @@ void CheckAge(int age)
     }
     Console.WriteLine("Age Applies");
 }
+
+Console.WriteLine("Custom exception example: ");
+
+try
+{
+    UserRegister(15);
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Custom error:" + ex.Message);
+}
+
+void UserRegister(int age)
+{
+    if (age < 18)
+    {
+        throw new AgeInvalidException("Age cannot be under 18! Registration failed.");
+    }
+    Console.WriteLine("User registered successfully!");
+}
