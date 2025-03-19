@@ -35,3 +35,25 @@ catch (Exception ex)
 {
     Console.WriteLine("An unknown error accured: " + ex.Message);
 }
+
+Console.WriteLine("Throw example:");
+
+try
+{
+    int age = 10;
+    CheckAge(age);
+
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Error caught:" + ex.Message);
+}
+
+void CheckAge(int age)
+{
+    if (age < 18)
+    {
+        throw new Exception("Age cannot be less than 18!");
+    }
+    Console.WriteLine("Age Applies");
+}
