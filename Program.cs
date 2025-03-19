@@ -17,3 +17,21 @@ finally
 {
     Console.WriteLine("The finally block is executed in all cases!");
 }
+
+Console.WriteLine("------------");
+
+try
+{
+    int[] array = { 1, 4, 7, 2, 5, 8 };
+    Console.WriteLine(array[10]);
+
+}
+catch (IndexOutOfRangeException e)
+{
+    Console.WriteLine("Array boundaries reached!");
+    Console.WriteLine("Error:" + e.Message);
+}
+catch (Exception ex)
+{
+    Console.WriteLine("An unknown error accured: " + ex.Message);
+}
